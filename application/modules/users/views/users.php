@@ -124,7 +124,7 @@
                                                                       <?php if ($this->user_nama != $d->user_nama){ ?>
                                                                       <a href="<?php echo url(1) .'/hapus/'. enkrip($d->user_id); ?>"
                                                                            class="btn btn-xs btn-danger"
-                                                                           onclick="return confirm('Yakin hapus user')"
+                                                                           onclick="return confirm('Yakin hapus <?php echo $d->user_namalengkap; ?>')"
                                                                            data-bs-toggle="tooltip"
                                                                            data-bs-placement="top" title="Hapus User">
                                                                            <i class="fa fa-user-times"></i>
@@ -147,3 +147,5 @@
                     </div>
                </div>
           </div>
+     </div>
+</div>

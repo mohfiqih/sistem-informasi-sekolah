@@ -3,12 +3,12 @@
 
 <head>
      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-     <title>Template</title>
+     <title>SIAAP - Sistem Informasi Akademik Application</title>
      <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-     <link rel="icon" href="assets/template_new/assets/img/icon.ico" type="image/x-icon" />
+     <link rel="icon" href="<?php echo base_url('assets/template_new/assets/img/icon.ico'); ?>" type="image/x-icon" />
 
      <!-- Fonts and icons -->
-     <script src="assets/template_new/assets/js/plugin/webfont/webfont.min.js"></script>
+     <script src="<?php echo base_url('assets/template_new/assets/js/plugin/webfont/webfont.min.js'); ?>"></script>
      <script>
      WebFont.load({
           google: {
@@ -18,7 +18,7 @@
                "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular",
                     "Font Awesome 5 Brands", "simple-line-icons"
                ],
-               urls: ['assets/template_new/assets/css/fonts.min.css']
+               urls: ['<?php echo base_url('assets/template_new/assets/css/fonts.min.css'); ?>']
           },
           active: function() {
                sessionStorage.fonts = true;
@@ -27,11 +27,11 @@
      </script>
 
      <!-- CSS Files -->
-     <link rel="stylesheet" href="assets/template_new/assets/css/bootstrap.min.css">
-     <link rel="stylesheet" href="assets/template_new/assets/css/atlantis.min.css">
+     <link rel="stylesheet" href="<?php echo base_url('assets/template_new/assets/css/bootstrap.min.css'); ?>">
+     <link rel="stylesheet" href="<?php echo base_url('assets/template_new/assets/css/atlantis.min.css'); ?>">
 
      <!-- CSS Just for demo purpose, don't include it in your project -->
-     <link rel="stylesheet" href="assets/template_new/assets/css/demo.css">
+     <link rel="stylesheet" href="<?php echo base_url('assets/template_new/assets/css/demo.css'); ?>">
 </head>
 
 <body>
@@ -40,9 +40,14 @@
                <!-- Logo Header -->
                <div class="logo-header" data-background-color="blue">
 
-                    <a href="#" class="logo">
+                    <!-- <a href="#" class="logo">
                          <img src="assets/template_new/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
-                    </a>
+                    </a> -->
+
+                    <div class="logo">
+                         <h2 class="text-white" style="margin-top: 15px;margin-left: 50px;">SIAAP</h2>
+                    </div>
+
                     <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
                          data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-icon">
@@ -206,7 +211,7 @@
 
                               </div>
                          </div>
-                         <?php if ($this->user_level == "Super Admin") {?>
+                         <?php if ($this->user_level == "Kepala") {?>
                          <ul class="nav nav-primary">
                               <li class="nav-section">
                                    <span class="sidebar-mini-icon">
@@ -214,16 +219,10 @@
                                    </span>
                                    <h4 class="text-section">Menu Navigation</h4>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item active">
                                    <a href="<?php echo base_url('dasbor'); ?>">
-                                        <i class="fas fa-user"></i>
+                                        <i class="fas fa-home"></i>
                                         <p>Dashboard</p>
-                                   </a>
-                              </li>
-                              <li class="nav-item">
-                                   <a href="<?php echo base_url('jadwal'); ?>">
-                                        <i class="fas fa-table"></i>
-                                        <p>Jadwal Pelajaran</p>
                                    </a>
                               </li>
                               <li class="nav-item">
@@ -233,20 +232,42 @@
                                    </a>
                               </li>
                               <li class="nav-item">
-                                   <a data-toggle="collapse" href="#tables">
-                                        <i class="fas fa-list"></i>
-                                        <p>Data Siswa</p>
+                                   <a data-toggle="collapse" href="#jadwal">
+                                        <i class="fas fa-table"></i>
+                                        <p>Jadwal</p>
                                         <span class="caret"></span>
                                    </a>
-                                   <div class="collapse" id="tables">
+                                   <div class="collapse" id="jadwal">
                                         <ul class="nav nav-collapse">
                                              <li>
-                                                  <a href="tables/tables.html">
-                                                       <span class="sub-item">Basic Table</span>
+                                                  <a href="<?php echo base_url('jadwal'); ?>">
+                                                       <span class="sub-item">Jadwal Pelajaran</span>
                                                   </a>
                                              </li>
                                              <li>
-                                                  <a href="tables/datatables.html">
+                                                  <a href="#">
+                                                       <span class="sub-item">Jadwal Kegiatan</span>
+                                                  </a>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </li>
+
+                              <li class="nav-item">
+                                   <a data-toggle="collapse" href="#datamaster">
+                                        <i class="fas fa-list"></i>
+                                        <p>Data Master</p>
+                                        <span class="caret"></span>
+                                   </a>
+                                   <div class="collapse" id="datamaster">
+                                        <ul class="nav nav-collapse">
+                                             <li>
+                                                  <a href="#">
+                                                       <span class="sub-item">Daftar Siswa</span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="#">
                                                        <span class="sub-item">Datatables</span>
                                                   </a>
                                              </li>
@@ -260,12 +281,6 @@
                                    </span>
                                    <h4 class="text-section">Master Data</h4>
                               </li>
-                              <!-- <li class="nav-item">
-                                   <a data-toggle="collapse" href="#base">
-                                        <i class="fas fa-layer-group"></i>
-                                        <p>Base</p>
-                                   </a>
-                              </li> -->
                               <li class="nav-item">
                                    <a href="<?php echo base_url('users'); ?>">
                                         <i class="fas fa-user"></i>
@@ -273,7 +288,7 @@
                                    </a>
                               </li>
                          </ul>
-                         <?php } else if($this->user_level == "Administrator") {?>
+                         <?php } else if($this->user_level == "Guru") {?>
                          <ul class="nav nav-primary">
                               <li class="nav-section">
                                    <span class="sidebar-mini-icon">
@@ -314,6 +329,7 @@
                                         <p>Dashboard</p>
                                    </a>
                               </li>
+
                          </ul>
                          <?php } ?>
                     </div>
@@ -408,36 +424,42 @@
           <!-- End Custom template -->
      </div>
      <!--   Core JS Files   -->
-     <script src="assets/template_new/assets/js/core/jquery.3.2.1.min.js"></script>
-     <script src="assets/template_new/assets/js/core/popper.min.js"></script>
-     <script src="assets/template_new/assets/js/core/bootstrap.min.js"></script>
+     <script src="<?php echo base_url('assets/template_new/assets/js/core/jquery.3.2.1.min.js'); ?>"></script>
+     <script src="<?php echo base_url('assets/template_new/assets/js/core/popper.min.js'); ?>"></script>
+     <script src="<?php echo base_url('assets/template_new/assets/js/core/bootstrap.min.js'); ?>"></script>
 
      <!-- jQuery UI -->
-     <script src="assets/template_new/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js">
+     <script
+          src="<?php echo base_url('assets/template_new/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js'); ?>">
      </script>
-     <script src="assets/template_new/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js">
+     <script
+          src="<?php echo base_url('assets/template_new/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js'); ?>">
      </script>
 
      <!-- jQuery Scrollbar -->
-     <script src="assets/template_new/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js">
+     <script
+          src="<?php echo base_url('assets/template_new/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js'); ?>">
      </script>
 
 
      <!-- Chart JS -->
-     <script src="assets/template_new/assets/js/plugin/chart.js/chart.min.js"></script>
+     <script src="<?php echo base_url('assets/template_new/assets/js/plugin/chart.js/chart.min.js'); ?>"></script>
 
      <!-- jQuery Sparkline -->
-     <script src="assets/template_new/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js">
+     <script
+          src="<?php echo base_url('assets/template_new/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js'); ?>">
      </script>
 
      <!-- Chart Circle -->
-     <script src="assets/template_new/assets/js/plugin/chart-circle/circles.min.js"></script>
+     <script src="<?php echo base_url('assets/template_new/assets/js/plugin/chart-circle/circles.min.js'); ?>"></script>
 
      <!-- Datatables -->
-     <script src="assets/template_new/assets/js/plugin/datatables/datatables.min.js"></script>
+     <script src="<?php echo base_url('assets/template_new/assets/js/plugin/datatables/datatables.min.js'); ?>">
+     </script>
 
      <!-- Bootstrap Notify -->
-     <script src="assets/template_new./assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js">
+     <script
+          src="<?php echo base_url('assets/template_new./assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js'); ?>">
      </script>
 
      <!-- jQuery Vector Maps -->
@@ -446,14 +468,15 @@
      </script> -->
 
      <!-- Sweet Alert -->
-     <script src="assets/template_new/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+     <script src="<?php echo base_url('assets/template_new/assets/js/plugin/sweetalert/sweetalert.min.js'); ?>">
+     </script>
 
      <!-- Atlantis JS -->
-     <script src="assets/template_new./assets/js/atlantis.min.js"></script>
+     <script src="<?php echo base_url('assets/template_new./assets/js/atlantis.min.js'); ?>"></script>
 
      <!-- Atlantis DEMO methods, don't include it in your project! -->
-     <script src="assets/template_new/assets/js/setting-demo.js"></script>
-     <script src="assets/template_new/assets/js/demo.js"></script>
+     <script src="<?php echo base_url('assets/template_new/assets/js/setting-demo.js'); ?>"></script>
+     <script src="<?php echo base_url('assets/template_new/assets/js/demo.js'); ?>"></script>
      <!-- <script>
      Circles.create({
           id: 'circles-1',

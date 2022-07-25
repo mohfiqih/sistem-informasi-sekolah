@@ -19,108 +19,66 @@
                               </nav>
                          </div>
                          <div class="card">
-                              <div class="card-body">
-                                   <div class="row">
-                                        <a href="<?php echo base_url('#'); ?>" style="text-decoration: none;">
-                                             <div class="card bg-primary text-white mb-3"
-                                                  style="max-width: 21rem;margin-left: 13px;">
-                                                  <div class="card-header">Kelas X</div>
-                                                  <div class="card-body">
-                                                       <h5 class="card-title text-white">Primary card title</h5>
-                                                       <p class="card-text">Some quick example text to build on the card
-                                                            title and make up the bulk of the card's content.</p>
+                              <center>
+                                   <div class="card-body" style="margin-left: 10px;">
+                                        <div class="row">
+                                             <a href="<?php echo base_url('jadwal/kelas_x'); ?>"
+                                                  style="text-decoration: none;">
+                                                  <div class="card bg-primary text-white mb-3"
+                                                       style="max-width: 15rem;margin-left: 20px;">
+                                                       <div class="card-header">Kelas X</div>
+                                                       <div class="card-body">
+                                                            <h5 class="card-title text-white">Kurikulum Merdeka</h5>
+                                                            <p class="card-text">Jadwal Kelas X MIPA 1 - 8 dan X IPS 1-
+                                                                 4</p>
+                                                       </div>
                                                   </div>
-                                             </div>
-                                        </a>
-                                        <a href="<?php echo base_url('#'); ?>" style="text-decoration: none;">
-                                             <div class="card bg-success text-white mb-3"
-                                                  style="max-width: 21rem;margin-left: 20px;">
-                                                  <div class="card-header">Kelas XI</div>
-                                                  <div class="card-body">
-                                                       <h5 class="card-title text-white">Secondary card title</h5>
-                                                       <p class="card-text">Some quick example text to build on the card
-                                                            title and make up the bulk of the card's content.</p>
+                                             </a>
+                                             <a href="<?php echo base_url('jadwal/kelas_xi'); ?>"
+                                                  style="text-decoration: none;">
+                                                  <div class="card bg-success text-white mb-3"
+                                                       style="max-width: 15rem;margin-left: 20px;">
+                                                       <div class="card-header">Kelas XI</div>
+                                                       <div class="card-body">
+                                                            <h5 class="card-title text-white">Kurikulum Merdeka</h5>
+                                                            <p class="card-text">Jadwal Kelas XI MIPA 1-7 dan XI IPS 1-5
+                                                            </p>
+                                                       </div>
                                                   </div>
-                                             </div>
-                                        </a>
-                                        <a href="<?php echo base_url('#'); ?>" style="text-decoration: none;">
-                                             <div class="card bg-danger text-white mb-3"
-                                                  style="max-width: 21rem;margin-left: 20px;">
-                                                  <div class="card-header">Kelas XII</div>
-                                                  <div class="card-body">
-                                                       <h5 class="card-title text-white">Success card title</h5>
-                                                       <p class="card-text">Some quick example text to build on the card
-                                                            title and make up the bulk of the card's content.</p>
+                                             </a>
+                                             <a href="<?php echo base_url('jadwal/kelas_xii'); ?>"
+                                                  style="text-decoration: none;">
+                                                  <div class="card bg-danger text-white mb-3"
+                                                       style="max-width: 15rem;margin-left: 20px;">
+                                                       <div class="card-header">Kelas XII</div>
+                                                       <div class="card-body">
+                                                            <h5 class="card-title text-white">Kurikulum Merdeka</h5>
+                                                            <p class="card-text">Jadwal Kelas XII MIPA 1 - 7 dan XII IPS
+                                                                 4
+                                                            </p>
+                                                       </div>
                                                   </div>
-                                             </div>
-                                        </a>
-                                        <!-- <div class="col-md-6">
-                                             <a href="<?php echo base_url('manajemen/form'); ?>">
-                                             <button type="button" style="float: left;height: 35px;margin-left: 10px;"
-                                                  class=" btn btn-success waves-effect waves-light">
-                                                  <span class="btn-label"><i class="mdi mdi-plus"></i></span>Add
-                                             </button>
-                                        </a>
-                                        <a href="<?php echo base_url('manajemen/export_manajerial'); ?>"
-                                             target="_blank">
-                                             <button type="button" style="float: left;height: 35px;margin-left: 10px;"
-                                                  class=" btn btn-danger waves-effect waves-light">
-                                                  <span class="btn-label"><i class="mdi mdi-export"></i></span>Export
-                                                  PDF
-                                             </button>
-                                        </a>
-                                   </div> -->
+                                             </a>
+                                             <a href="<?php echo base_url('jadwal/guru'); ?>"
+                                                  style="text-decoration: none;">
+                                                  <div class="card bg-secondary text-white mb-3"
+                                                       style="max-width: 15rem;margin-left: 20px;">
+                                                       <div class="card-header">Jadwal Guru</div>
+                                                       <div class="card-body">
+                                                            <h5 class="card-title text-white">Jadwal</h5>
+                                                            <p class="card-text">Jadwal Semua Guru dan Karyawan
+                                                            </p>
+                                                       </div>
+                                                  </div>
+                                             </a>
 
-                                        <!-- <div class="card-body" data-mdb-perfect-scrollbar="true"
-                                             style="overflow-x: auto;">
-                                             <table id="myTable" class="table table-hover mb-0">
-                                                  <thead>
-                                                       <tr>
-                                                            <th class="align-middle" scope="col" style="width: 10px;">No
-                                                            </th>
-                                                            <th class="align-middle" scope="col" style="width: 160px;">
-                                                                 Application
-                                                                 Code</th>
-                                                            <th class="align-middle" scope="col">Application Name</th>
-                                                            <th class="align-middle" scope="col">Application Version
-                                                            </th>
-                                                            <th class="align-middle" scope="col" style="width: 100px;">
-                                                                 Action
-                                                            </th>
-                                                       </tr>
-                                                  </thead>
-                                                  <tbody>
 
-                                                       <tr class="fw-normal">
-                                                            <th class="align-middle">
-
-                                                            </th>
-                                                            <th class="align-middle">
-
-                                                            </th>
-                                                            <td class="align-middle">
-
-                                                            </td>
-                                                            <td class="align-middle">
-
-                                                            </td>
-                                                            <td class="align-middle">
-                                                                 <a href="" data-mdb-toggle="tooltip"
-                                                                      class="fas fa-eye text-success me-3"
-                                                                      title="Detail">
-                                                                 </a>
-
-                                                                 <a href="" data-mdb-toggle="tooltip" title="Remove"
-                                                                      onclick="return confirm('Yakin hapus data?')"><i
-                                                                           class="fas fa-trash-alt text-danger"></i></a>
-                                                            </td>
-                                                       </tr>
-                                                  </tbody>
-                                             </table>
-                                        </div> -->
+                                        </div>
                                    </div>
-                              </div>
+                              </center>
                          </div>
                     </div>
                </div>
           </div>
+     </div>
+</div>

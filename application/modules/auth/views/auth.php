@@ -21,7 +21,7 @@
      <!-- Style -->
      <link rel="stylesheet" href="assets/auth/css/style.css">
 
-     <title>Form Login</title>
+     <title>Form Login Sistem Informasi Aplikasi</title>
 
      <script>
      $(window).load(function() {
@@ -53,7 +53,7 @@
                               <div class="form-block" style="border-radius: 15px;">
                                    <form action="auth/proses" method="POST" class="login100-form validate-form">
                                         <div class="text-center mb-5">
-                                             <h3>Login to <strong>Application</strong></h3>
+                                             <h3>Login to <strong>SIAAP</strong></h3>
                                              <!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
                                         </div>
                                         <?php if ($this->session->flashdata('notifikasi')){ ?>
@@ -98,7 +98,7 @@
                               </div>
                               <div class="text-center p-t-100">
                                    <a class="txt2" href="" style="text-decoration: none;">Copyright 2022 &copy;
-                                        Aplikasi Created by mohfiqih_
+                                        SIAAP Created by mohfiqih_
                                    </a>
                               </div>
                          </div>
